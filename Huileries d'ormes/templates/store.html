@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ferme d'Ormes - Boutique</title>
+  <meta name="description" content="Huilerie d'Ormes - Produits locaux, huiles artisanales, points de vente." />
+  <meta name="author" content="Ferme d'Ormes" />
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: transparent;
+    }
+
+    body {
+      font-family: 'Lora', serif;
+      background-image: url("{{ url_for('static', filename='img/paysagedefon.png') }}");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    nav {
+      background-color: #5E503F;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #FAF7EF;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 1.1rem;
+      position: relative;
+    }
+
+    nav a:hover {
+      color: #E0C9A6;
+    }
+
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #E0C9A6;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .intro-banner {
+      text-align: center;
+      margin: 3rem auto 2rem;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .intro-banner h1 {
+      font-size: 3rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      margin: 0;
+    }
+
+    .intro-banner p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    .content-wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .about-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(4px);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    .about-box h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      text-align: center;
+      color: #4B3621;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-box h2 span {
+      display: block;
+    }
+
+    .about-box h3 {
+      margin-top: 1.5rem;
+      color: #5E503F;
+    }
+
+    .about-box ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 0.5rem;
+    }
+
+    .about-box li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    .about-box p {
+      text-align: center;
+      margin-top: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .about-box img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #5E503F;
+      color: #EDE7DE;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="{{ url_for('index') }}">Accueil</a>
+    <a href="{{ url_for('about') }}">À propos</a>
+    <a href="{{ url_for('products') }}">Produits</a>
+    <a href="{{ url_for('store') }}">Boutique</a>
+  </nav>
+
+  <section class="intro-banner">
+    <h1>Ferme d'Ormes</h1>
+    <p>Huiles artisanales & produits locaux</p>
+  </section>
+
+  <main>
+    <section>
+      <div class="content-wrapper">
+        <div class="about-box">
+          <h2>
+            <span>Venez nous voir</span>
+            <span>Nos horaires</span>
+          </h2>
+          <ul>
+
+            <li>Vendredi <span>16h00 - 19h00</span></li>
+            
+          </ul>
+          <p>
+            <em><strong>Ferme d'Ormes</strong><br />54740 Ormes-et-Ville, France</em>
+          </p>
+          <p>
+            <small><em>Appelez-nous</em></small><br />
+            06 67 22 11 13
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrapper">
+        <div class="about-box">
+          <h2>
+            <span>Où trouver nos produits</span>
+            <span>Nos points de vente</span>
+          </h2>
+
+          <h3>Meurthe-et-Moselle (54)</h3>
+          <ul>
+            <li>La Belle Campagne – Vandoeuvre</li>
+            <li>Ma Bonne Étoile – Praye</li>
+            <li>L’EpiCURIE – Vroncourt</li>
+            <li>Ma Clé des Champs – Vézelise</li>
+            <li>O'Maribelle – Ochey</li>
+            <li>Le Domaine de Sion – Saxon Sion</li>
+            <li>Les Malices de Suzette – Rosières-aux-Salines</li>
+            <li>Les Terroirs de Stanislas – Malzéville</li>
+            <li>Ferme de la Souleuvre – Prény</li>
+            <li>La Nouvelle Basse Cour – Bainville-sur-Madon</li>
+            <li>GAEC Saint Bernardin – Xeuilley</li>
+            <li>Supermarché G20 – Vézelise</li>
+          </ul>
+
+          <h3>Vosges (88)</h3>
+          <ul>
+            <li>BioVosges – Mirecourt</li>
+            <li>À la Revoyotte – Forges</li>
+          </ul>
+
+          <h3>Meuse</h3>
+          <ul>
+            <li><a href="https://www.lespaniersdesophie.fr" target="_blank">Les paniers de Sophie</a></li>
+          </ul>
+
+          <h3>Épiceries partenaires</h3>
+          <ul>
+            <li>Graines d’Essentiel – Épicerie ambulante (Lunévillois)</li>
+            <li><a href="http://www.emplettespaysannes.fr" target="_blank">Drive Fermier</a> – Ludres, Laxou, Tomblaine, Toul, Lunéville</li>
+            <li><a href="https://laruchequiditoui.fr" target="_blank">La Ruche qui dit Oui</a></li>
+          </ul>
+
+          <h3>Marchés locaux</h3>
+          <ul>
+            <li>Haroué – Dernier dimanche du mois, matin</li>
+            <li>Vézelise – Deuxième samedi du mois, matin</li>
+            <li>Bouxurulles – Quatrième samedi du mois, matin</li>
+          </ul>
+
+          <p style="text-align: center; font-style: italic;">À bientôt sur l’un de nos marchés ou points de vente !</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="content-wrapper">
+        <div class="about-box">
+          <h2>
+            <span>Nous trouver</span>
+            <span>Carte interactive</span>
+          </h2>
+          <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.788509925277!2d6.181026215699295!3d48.488768179252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4794a617fb90eb61%3A0x7f8f6ff7ee82c76f!2sHuilerie%20d'Ormes!5e0!3m2!1sfr!2sfr!4v1721400000000!5m2!1sfr!2sfr"
+              style="border:0; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <p style="text-align:center; margin-top:1rem;">
+            📍 Chemin de la Ferme, 54740 Ormes-et-Ville, France
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Ferme d'Ormes 2025</p>
+  </footer>
+
+</body>
+</html>

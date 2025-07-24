@@ -1,0 +1,167 @@
+/* ----- GLOBAL ----- */
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background: url("/static/img/paysagedefon.png") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+/* ----- NAVIGATION ----- */
+nav {
+  background-color: #5E503F;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+nav a {
+  color: #FAF7EF;
+  margin: 0 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #E0C9A6;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #E0C9A6;
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ----- BANNIÈRE ----- */
+.intro-banner {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  /* background & blur supprimés */
+}
+
+.intro-banner h1,
+.intro-banner p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+/* ----- TITRE SECTION ----- */
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 2rem 0 1.5rem;
+  color: #4B3621;
+}
+
+/* ----- GRILLE PRODUITS ----- */
+.memory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+  justify-items: center;
+}
+
+/* ----- CARTE PRODUIT ----- */
+.product-card {
+  perspective: 1000px;
+  cursor: pointer;
+  width: 100%;
+  height: 320px;
+  max-width: 240px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.product-card.flipped .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  backface-visibility: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.card-front {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  background: rgba(255, 255, 255, 0.96);
+  padding: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #3E2723;
+}
+
+/* ----- OVERLAY ----- */
+.card-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #3E2723;
+  backdrop-filter: blur(4px);
+  text-align: center;
+  width: 90%;
+}
+
+/* ----- FOOTER ----- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #5E503F;
+  color: #EDE7DE;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+  .btn-detail {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #5E503F;
+    color: #FAF7EF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-detail:hover {
+    background-color: #7D6B50;
+  }
