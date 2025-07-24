@@ -6,9 +6,9 @@
   <title>Ferme d'Ormes - Café Artisanal</title>
   <meta name="description" content="Produits locaux, café artisanal et ambiance chaleureuse." />
   <meta name="author" content="Ferme d'Ormes" />
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="icon" href="static/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="stylesheet" href="static/css/styles.css" />
 
   <style>
     html, body {
@@ -19,7 +19,7 @@
 
     body {
       font-family: 'Lora', serif;
-      background-image: url("{{ url_for('static', filename='img/paysagedefon.png') }}");
+      background-image: url("static/img/paysagedefon.png");
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -172,10 +172,10 @@
 <body>
 
   <nav>
-    <a href="{{ url_for('index') }}">Accueil</a>
-    <a href="{{ url_for('about') }}">À propos</a>
-    <a href="{{ url_for('products') }}">Produits</a>
-    <a href="{{ url_for('store') }}">Boutique</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="products.html">Produits</a>
+    <a href="store.html">Boutique</a>
   </nav>
 
   <section class="intro-banner">
@@ -204,7 +204,6 @@
             <span>Ressources utiles</span>
           </h2>
           <div class="links-list">
-
             <p><a href="https://www.facebook.com/Huilerie-dOrmes-1050508558349166/" target="_blank">📘 Suivez notre actualité sur Facebook</a></p>
             <p><a href="https://app.cagette.net/vendor/16130" target="_blank">🛒 Commandez vos produits en ligne</a></p>
             <p><a href="https://lesfermesvertes.fr/" target="_blank">🌿 Achetez via Les Fermes Vertes</a></p>
