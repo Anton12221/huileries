@@ -6,7 +6,7 @@
   <title>Ferme d'Ormes - Produits Locaux</title>
   <meta name="description" content="Produits fermiers, huiles artisanales, farines locales." />
   <meta name="author" content="Ferme d'Ormes" />
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="icon" href="static/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
 
   <style>
@@ -14,7 +14,7 @@
       margin: 0;
       padding: 0;
       font-family: 'Lora', serif;
-      background-image: url("{{ url_for('static', filename='img/paysagedefon.png') }}");
+      background-image: url("static/img/paysagedefon.png");
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -183,10 +183,10 @@
 <body>
 
   <nav>
-    <a href="{{ url_for('index') }}">Accueil</a>
-    <a href="{{ url_for('about') }}">À propos</a>
-    <a href="{{ url_for('products') }}">Produits</a>
-    <a href="{{ url_for('store') }}">Boutique</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="products.html">Produits</a>
+    <a href="store.html">Boutique</a>
   </nav>
 
   <header class="intro-banner">
@@ -198,22 +198,31 @@
     <section>
       <h2 class="section-title">Nos Produits Locaux</h2>
       <div class="memory-grid">
-        {% for item in produits %}
+
+        <!-- Produit 1 -->
         <div class="product-card">
-          <div class="product-image" style="background-image: url('{{ url_for('static', filename='img/' + item.file) }}');"></div>
+          <div class="product-image" style="background-image: url('static/img/huile-tournesol.jpg');"></div>
           <div class="product-content">
-            <div class="product-title">{{ item.title }}</div>
-            <div class="product-desc">{{ item.desc }}</div>
-            <div class="product-price">
-              {{ item.price }} € TTC
-              {% if item.unit_price %}
-              <small style="color: #555;">({{ item.unit_price }})</small>
-              {% endif %}
-            </div>
-            <a href="{{ url_for('documentation') }}" class="btn-detail">Détails</a>
+            <div class="product-title">Huile de Tournesol</div>
+            <div class="product-desc">Huile douce, pressée à froid, parfaite pour l’assaisonnement.</div>
+            <div class="product-price">6 € TTC</div>
+            <a href="documentation.html" class="btn-detail">Détails</a>
           </div>
         </div>
-        {% endfor %}
+
+        <!-- Produit 2 -->
+        <div class="product-card">
+          <div class="product-image" style="background-image: url('static/img/farine-sarrasin.jpg');"></div>
+          <div class="product-content">
+            <div class="product-title">Farine de Sarrasin</div>
+            <div class="product-desc">Idéale pour les galettes et crêpes bretonnes, moulue sur pierre.</div>
+            <div class="product-price">4,50 € TTC</div>
+            <a href="documentation.html" class="btn-detail">Détails</a>
+          </div>
+        </div>
+
+        <!-- Ajoute d'autres produits ici -->
+
       </div>
     </section>
   </main>
