@@ -6,9 +6,9 @@
   <title>Ferme d'Ormes - Boutique</title>
   <meta name="description" content="Huilerie d'Ormes - Produits locaux, huiles artisanales, points de vente." />
   <meta name="author" content="Ferme d'Ormes" />
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="icon" href="static/favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="stylesheet" href="static/css/styles.css" />
 
   <style>
     html, body {
@@ -19,7 +19,7 @@
 
     body {
       font-family: 'Lora', serif;
-      background-image: url("{{ url_for('static', filename='img/paysagedefon.png') }}");
+      background-image: url("static/img/paysagedefon.png");
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -166,10 +166,10 @@
 <body>
 
   <nav>
-    <a href="{{ url_for('index') }}">Accueil</a>
-    <a href="{{ url_for('about') }}">À propos</a>
-    <a href="{{ url_for('products') }}">Produits</a>
-    <a href="{{ url_for('store') }}">Boutique</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="products.html">Produits</a>
+    <a href="store.html">Boutique</a>
   </nav>
 
   <section class="intro-banner">
@@ -186,9 +186,7 @@
             <span>Nos horaires</span>
           </h2>
           <ul>
-
             <li>Vendredi <span>16h00 - 19h00</span></li>
-            
           </ul>
           <p>
             <em><strong>Ferme d'Ormes</strong><br />54740 Ormes-et-Ville, France</em>
