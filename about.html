@@ -6,10 +6,10 @@
   <title>Ferme d'Ormes - À propos</title>
   <meta name="description" content="Découvrez l’histoire du café et des produits locaux de la Ferme d'Ormes." />
   <meta name="author" content="Ferme d'Ormes" />
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+  <link rel="icon" href="static/favicon.ico" />
 
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="stylesheet" href="static/css/styles.css" />
 
   <style>
     html, body {
@@ -20,7 +20,7 @@
 
     body {
       font-family: 'Lora', serif;
-      background-image: url("{{ url_for('static', filename='img/paysagedefon.png') }}");
+      background-image: url("static/img/paysagedefon.png");
       background-size: cover;
       background-attachment: fixed;
       background-repeat: no-repeat;
@@ -199,10 +199,10 @@
 <body>
 
   <nav>
-    <a href="{{ url_for('index') }}">Accueil</a>
-    <a href="{{ url_for('about') }}">À propos</a>
-    <a href="{{ url_for('products') }}">Produits</a>
-    <a href="{{ url_for('store') }}">Boutique</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="products.html">Produits</a>
+    <a href="store.html">Boutique</a>
   </nav>
 
   <section class="intro-banner">
@@ -233,20 +233,19 @@
 
     <!-- SECTION STYLE CAFÉ - VERTICALE -->
     <section class="highlight-section">
+
       <div class="highlight-block">
-        <div class="highlight-label">Agricultures Biologique</div>
-        <img src="{{ url_for('static', filename='img/bio.png') }}" alt="Paysage champêtre">
+        <div class="highlight-label">Agriculture Biologique</div>
+        <img src="static/img/bio.png" alt="Paysage champêtre">
         <p>Entrée en agriculture Biologique durant l'année 2018 lors d'un stage agricole</p>
       </div>
 
       <div class="highlight-block">
-        <div class="highlight-label">La Ferme durant</div>
-        <img src="{{ url_for('static', filename='img/éolienne.png') }}" alt="Ferme ancienne">
+        <div class="highlight-label">La Ferme Durant</div>
+        <img src="static/img/éolienne.png" alt="Ferme ancienne">
         <p>Notre ferme est familiale depuis trois générations, bâtie autour de valeurs d’agriculture durable et locale.</p>
       </div>
 
-   
-      </div>
     </section>
   </main>
 
