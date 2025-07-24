@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nos Huiles - Huilerie d'Ormes</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  <link rel="stylesheet" href="static/css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
   <style>
     .huiles-section {
@@ -39,15 +39,84 @@
       font-weight: bold;
       color: #5E503F;
     }
+    nav {
+      background-color: #5E503F;
+      padding: 1rem 0;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav a {
+      color: #FAF7EF;
+      margin: 0 1.5rem;
+      text-decoration: none;
+      font-family: 'Raleway', sans-serif;
+      font-weight: bold;
+      font-size: 1.1rem;
+      position: relative;
+    }
+    nav a:hover {
+      color: #E0C9A6;
+    }
+    nav a::after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0%;
+      background: #E0C9A6;
+      transition: width 0.3s ease;
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .intro-banner {
+      text-align: center;
+      margin: 3rem auto 2rem;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+    .intro-banner h1 {
+      font-size: 3rem;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 800;
+      margin: 0;
+    }
+    .intro-banner p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #5E503F;
+      color: #EDE7DE;
+      font-size: 0.9rem;
+    }
+    body {
+      font-family: 'Lora', serif;
+      background-image: url("static/img/paysagedefon.png");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-position: center;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
   </style>
 </head>
 
 <body>
   <nav>
-    <a href="{{ url_for('index') }}">Accueil</a>
-    <a href="{{ url_for('about') }}">À propos</a>
-    <a href="{{ url_for('products') }}">Produits</a>
-    <a href="{{ url_for('store') }}">Boutique</a>
+    <a href="index.html">Accueil</a>
+    <a href="about.html">À propos</a>
+    <a href="products.html">Produits</a>
+    <a href="store.html">Boutique</a>
   </nav>
 
   <section class="intro-banner">
